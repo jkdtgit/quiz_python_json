@@ -88,9 +88,9 @@ class main_window:
 
         change_of_option = 0
 
-        print("selected answer is:", selected_answer.get(), "correct ans: ", correct_answer)
-        print("Selected answer type: ", type(selected_answer))
-        print("correct answer type: ", type(correct_answer))
+        #print("selected answer is:", selected_answer.get(), "correct ans: ", correct_answer)
+        #print("Selected answer type: ", type(selected_answer))
+        #print("correct answer type: ", type(correct_answer))
 
         self.result_lbl = Label(self.math_frame2, text="",
                                 font=("times", 16, "bold"))
@@ -174,7 +174,7 @@ class main_window:
         option4 = item[current_quest_num]['Option4']
         correct_answer = item[current_quest_num]['Answer']
 
-        print("correct answer: ", correct_answer)
+       # print("correct answer: ", correct_answer)
 
         self.math_frame = Frame(self.window, height=100, width=1000, bd=2, relief=GROOVE)
         self.math_frame.pack()
@@ -184,9 +184,9 @@ class main_window:
                            font=("times", 25, "bold"))
         math_title.place(x=250, y=5)
 
-        self.math_frame0 = Frame(self.window, height=100, width=1000, bd=2, relief=GROOVE)
+        self.math_frame0 = Frame(self.window, height=200, width=1000, bd=2, relief=GROOVE)
         self.math_frame0.pack() #question
-        self.question = Label(self.math_frame0, text=f"{item[current_quest_num]['Question']}", fg="black",
+        self.question = Label(self.math_frame0, text=f"{current_quest_num+1}) {item[current_quest_num]['Question']}", fg="black",
                               font=("times", 16, "bold"))
         self.question.place(x=10, y=10)
 
